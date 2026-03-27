@@ -1,0 +1,8 @@
+Input LHE file: /home/hamzeh-khanpour/MG5_aMC_v3_6_6/AA_ZZ_madspin/Events/run_02_decayed_1/decayed_events.lhe
+Correlated events used: 1000000
+Cross section after decay [pb]: 7.598532773456e-06
+
+Truncation mode: mzz
+Cut used: m_{ZZ} #leq 1000 GeV
+Passing events: 11309 / 1000000 = 0.011309
+Estimated truncated cross section: 8.59318071e-08 pb
