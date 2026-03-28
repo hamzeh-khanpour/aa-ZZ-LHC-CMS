@@ -2,7 +2,7 @@
 
 A small analysis framework for studying exclusive photon-fusion diboson production,
 
-$\gamma\gamma \to ZZ \to \mu^+\mu^- + \nu\bar\nu,$
+$\gamma\gamma \to ZZ \to \mu^+\mu^- \nu\bar\nu,$
 
 with an emphasis on
 
