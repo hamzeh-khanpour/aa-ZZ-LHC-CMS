@@ -2,9 +2,7 @@
 
 A small analysis framework for studying exclusive photon-fusion diboson production,
 
-$
-\gamma\gamma \to ZZ \to \mu^+\mu^- + \nu\bar\nu,
-$
+$\gamma\gamma \to ZZ \to \mu^+\mu^- + \nu\bar\nu,$
 
 with an emphasis on
 
@@ -29,9 +27,7 @@ At a more formal level, EFT descriptions of genuine quartic gauge couplings are 
 
 The basic EFT logic is simple:
 
-$
-\mathcal{L}_{\text{eff}} = \mathcal{L}_{\text{SM}} + \sum_i \frac{f_i}{\Lambda^4} \, O_i
-$
+$\mathcal{L}_{\text{eff}} = \mathcal{L}_{\text{SM}} + \sum_i \frac{f_i}{\Lambda^4} \, O_i$
 
 for the genuine dimension-8 quartic operators in a linear EFT description. In practice, the repository is used to study one benchmark coefficient at a time, with all other anomalous couplings set to zero.
 
@@ -60,21 +56,15 @@ In this repository, **clipping** means:
 
 For the exclusive Born-level process
 
-$
-\gamma\gamma \to ZZ,
-$
+$\gamma\gamma \to ZZ,$
 
 the natural hard scale is the diboson invariant mass:
 
-$
-m_{ZZ}^{\text{truth}} \simeq \sqrt{\hat s} \simeq \sqrt{s_{\gamma\gamma}}.
-$
+$m_{ZZ}^{\text{truth}} \simeq \sqrt{\hat s} \simeq \sqrt{s_{\gamma\gamma}}.$
 
 So the practical clipping prescription used here is
 
-$
-m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}}.
-$
+$m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}}.$
 
 This is conceptually the same kind of operation used in the CMS note: the clipping threshold is an energy scale motivated by unitarity, while the actual implementation removes anomalous signal events **at generator/truth level** above that scale. The reconstructed distributions are then recomputed from the surviving events. fileciteturn28file14
 
@@ -141,15 +131,11 @@ The main truth-level observables reconstructed in this project are:
 
 For an exclusive $2\to2$ Born-level sample, these variables are tightly related. In particular,
 
-$
-p_T(\mu^+\mu^-) = p_T(Z),
-$
+$p_T(\mu^+\mu^-) = p_T(Z),$
 
 and the kinematic boundary is
 
-$
-p_T^{\max} = \frac{1}{2}\sqrt{m_{ZZ}^2 - 4m_Z^2}.
-$
+$p_T^{\max} = \frac{1}{2}\sqrt{m_{ZZ}^2 - 4m_Z^2}.$
 
 This is why the hardest $p_T$ tail is strongly correlated with the largest $m_{ZZ}$ values.
 
@@ -165,9 +151,7 @@ The logic is:
 2. reconstruct event-level truth observables,
 3. choose a clipping threshold $\Lambda_{\text{clip}}$,
 4. keep only events with
-   $
-   m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}},
-   $
+   $m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}},$
 5. rebuild the distributions for:
    - full sample,
    - clipped sample,
@@ -189,9 +173,7 @@ A key point is that **$\Lambda_{\text{clip}}$** is the **threshold**, not the va
 
 In the CMS note, the clipping scale is derived from a unitarity argument and then applied to the generated anomalous signal. In this repository, the practical implementation is
 
-$
-m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}},
-$
+$m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}},$
 
 because for the exclusive truth-level process studied here, $m_{ZZ}^{\text{truth}}$ is the cleanest event-by-event proxy for the hard scale.
 
