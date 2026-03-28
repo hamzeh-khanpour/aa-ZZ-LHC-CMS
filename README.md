@@ -27,7 +27,7 @@ At a more formal level, EFT descriptions of genuine quartic gauge couplings are 
 
 The basic EFT logic is simple:
 
-$\mathcal{L}_{\text{eff}} = \mathcal{L}_{\text{SM}} + \sum_i \frac{f_i}{\Lambda^4} \, O_i$
+$$\mathcal{L}_{\text{eff}} = \mathcal{L}_{\text{SM}} + \sum_i \frac{f_i}{\Lambda^4}\, O_i$$
 
 for the genuine dimension-8 quartic operators in a linear EFT description. In practice, the repository is used to study one benchmark coefficient at a time, with all other anomalous couplings set to zero.
 
