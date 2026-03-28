@@ -17,9 +17,9 @@ This repository is intended as a lightweight, transparent study environment for 
 
 ## Physics motivation
 
-In the Standard Model, neutral quartic gauge interactions are highly constrained, and exclusive high-mass photon-fusion diboson production is a clean place to search for deviations from the SM prediction. The CMS+PPS analysis note for exclusive $\gamma\gamma\to WW$ and $\gamma\gamma\to ZZ$ with intact protons focuses precisely on this kind of topology and on the high-mass tail accessible with proton tagging. In that note, the two-photon collision energy can be determined event by event from the proton kinematics, and the signal interpretation is performed in terms of anomalous quartic gauge couplings. See **CMS AN-19-211** for the analysis context, PPS acceptance, and signal modeling choices. fileciteturn26file0turn27file12
+In the Standard Model, neutral quartic gauge interactions are highly constrained, and exclusive high-mass photon-fusion diboson production is a clean place to search for deviations from the SM prediction. The CMS+PPS analysis note for exclusive $\gamma\gamma\to WW$ and $\gamma\gamma\to ZZ$ with intact protons focuses precisely on this kind of topology and on the high-mass tail accessible with proton tagging. In that note, the two-photon collision energy can be determined event by event from the proton kinematics, and the signal interpretation is performed in terms of anomalous quartic gauge couplings. See **CMS AN-19-211** for the analysis context, PPS acceptance, and signal modeling choices. 
 
-At a more formal level, EFT descriptions of genuine quartic gauge couplings are known to produce amplitudes that grow with energy. The paper **“Unitarity Constraints on Anomalous Quartic Couplings”** studies these effects systematically using coupled-channel partial-wave unitarity, including all relevant helicities and both $J=0$ and $J=1$ partial waves. In a linear realization of electroweak symmetry, the lowest genuine QGC operators arise at dimension eight. fileciteturn27file3turn28file0turn28file4
+At a more formal level, EFT descriptions of genuine quartic gauge couplings are known to produce amplitudes that grow with energy. The paper **“Unitarity Constraints on Anomalous Quartic Couplings”** studies these effects systematically using coupled-channel partial-wave unitarity, including all relevant helicities and both $J=0$ and $J=1$ partial waves. In a linear realization of electroweak symmetry, the lowest genuine QGC operators arise at dimension eight.  
 
 ---
 
@@ -34,17 +34,17 @@ for the genuine dimension-8 quartic operators in a linear EFT description. In pr
 Two important points are worth keeping in mind:
 
 1. **The EFT is an expansion.** It is trustworthy only below some characteristic energy scale.
-2. **The anomalous amplitudes grow with energy.** If one pushes the EFT too far into the ultraviolet, the predicted cross section can become dominated by events in a region where perturbative unitarity is no longer reliable. fileciteturn28file0turn28file3
+2. **The anomalous amplitudes grow with energy.** If one pushes the EFT too far into the ultraviolet, the predicted cross section can become dominated by events in a region where perturbative unitarity is no longer reliable. 
 
-The CMS note uses a LEP-style anomalous-coupling parameterization for its central result, and later discusses the mapping to dimension-8 $f_{M,i}$ operators. This repository instead uses a modern UFO-based sample generation workflow and truth-level observables from the generated event record, but the physical issue is the same: the far high-mass tail can be EFT-sensitive and eventually unphysical if no validity criterion is imposed. fileciteturn28file13
+The CMS note uses a LEP-style anomalous-coupling parameterization for its central result, and later discusses the mapping to dimension-8 $f_{M,i}$ operators. This repository instead uses a modern UFO-based sample generation workflow and truth-level observables from the generated event record, but the physical issue is the same: the far high-mass tail can be EFT-sensitive and eventually unphysical if no validity criterion is imposed. 
 
 ---
 
 ## Why unitarity becomes a problem
 
-If anomalous quartic couplings are large enough, the partial-wave amplitudes violate the perturbative unitarity bound at sufficiently high energy. The general condition can be expressed in terms of the partial-wave amplitudes $T^J$, with the strongest constraints obtained after diagonalizing the coupled-channel matrix in particle and helicity space. The dedicated unitarity study by Almeida, Éboli, and Gonzalez-Garcia explicitly shows that one must account for all coupled channels and that $J=1$ can matter in addition to $J=0$ in realistic multidimensional operator scans. fileciteturn28file0turn28file4
+If anomalous quartic couplings are large enough, the partial-wave amplitudes violate the perturbative unitarity bound at sufficiently high energy. The general condition can be expressed in terms of the partial-wave amplitudes $T^J$, with the strongest constraints obtained after diagonalizing the coupled-channel matrix in particle and helicity space. The dedicated unitarity study by Almeida, Éboli, and Gonzalez-Garcia explicitly shows that one must account for all coupled channels and that $J=1$ can matter in addition to $J=0$ in realistic multidimensional operator scans. 
 
-The CMS analysis note also discusses this issue explicitly. In its $\gamma\gamma\to VV$ study, it computes the energy at which the expected anomalous signal would violate unitarity and then evaluates the impact of removing the unphysical region. In the note, the unitarity-violating part of the anomalous signal is removed from the analysis while the data and backgrounds are left unchanged. fileciteturn28file11turn28file14
+The CMS analysis note also discusses this issue explicitly. In its $\gamma\gamma\to VV$ study, it computes the energy at which the expected anomalous signal would violate unitarity and then evaluates the impact of removing the unphysical region. In the note, the unitarity-violating part of the anomalous signal is removed from the analysis while the data and backgrounds are left unchanged.  
 
 ---
 
@@ -66,9 +66,9 @@ So the practical clipping prescription used here is
 
 $m_{ZZ}^{\text{truth}} < \Lambda_{\text{clip}}.$
 
-This is conceptually the same kind of operation used in the CMS note: the clipping threshold is an energy scale motivated by unitarity, while the actual implementation removes anomalous signal events **at generator/truth level** above that scale. The reconstructed distributions are then recomputed from the surviving events. fileciteturn28file14
+This is conceptually the same kind of operation used in the CMS note: the clipping threshold is an energy scale motivated by unitarity, while the actual implementation removes anomalous signal events **at generator/truth level** above that scale. The reconstructed distributions are then recomputed from the surviving events.  
 
-Because this repository works directly at LHE truth level, the clipping is especially clean: there is no detector smearing, no proton misreconstruction, and no migration from truth below the cut to reconstructed masses above the cut. In a full detector analysis, a residual reconstructed tail can survive above the nominal clipping scale due to resolution and combinatorics; that is one of the effects visible in the CMS note. fileciteturn28file14
+Because this repository works directly at LHE truth level, the clipping is especially clean: there is no detector smearing, no proton misreconstruction, and no migration from truth below the cut to reconstructed masses above the cut. In a full detector analysis, a residual reconstructed tail can survive above the nominal clipping scale due to resolution and combinatorics; that is one of the effects visible in the CMS note. 
 
 ---
 
@@ -76,7 +76,7 @@ Because this repository works directly at LHE truth level, the clipping is espec
 
 Clipping is not a cosmetic choice. It addresses a real physics problem.
 
-Without a validity criterion, the anomalous signal can become dominated by the far UV region. This makes the resulting limits deceptively strong, because they are being driven by a part of phase space where the EFT may not be trustworthy. The CMS note explicitly compares unclipped and clipped limits and shows that clipping weakens the expected sensitivity, as it should once the unphysical high-energy growth is removed. It also emphasizes that the effect of clipping depends on the channel and on the acceptance. fileciteturn28file5turn28file14
+Without a validity criterion, the anomalous signal can become dominated by the far UV region. This makes the resulting limits deceptively strong, because they are being driven by a part of phase space where the EFT may not be trustworthy. The CMS note explicitly compares unclipped and clipped limits and shows that clipping weakens the expected sensitivity, as it should once the unphysical high-energy growth is removed. It also emphasizes that the effect of clipping depends on the channel and on the acceptance.  
 
 In this repository, clipping is used for the same reason:
 
@@ -89,7 +89,7 @@ In this repository, clipping is used for the same reason:
 
 ## Sample generation strategy
 
-The CMS PPS note uses signal MC samples for $\gamma\gamma\to WW$ and $\gamma\gamma\to ZZ$ produced with **FPMC**, including the outgoing protons, and then combines the central detector simulation with a dedicated PPS proton fast simulation. It also states that these samples were produced with the **dimension-6 AQGC formalism**, with **no form factors and no unitarization**, which is exactly why the clipping discussion becomes necessary in that note. fileciteturn27file10turn27file13
+The CMS PPS note uses signal MC samples for $\gamma\gamma\to WW$ and $\gamma\gamma\to ZZ$ produced with **FPMC**, including the outgoing protons, and then combines the central detector simulation with a dedicated PPS proton fast simulation. It also states that these samples were produced with the **dimension-6 AQGC formalism**, with **no form factors and no unitarization**, which is exactly why the clipping discussion becomes necessary in that note. 
 
 In this repository, the workflow is different but closely analogous in spirit:
 
@@ -251,9 +251,9 @@ The repository therefore follows the **CMS clipping philosophy**, while adapting
 
 ## References
 
-1. **CMS AN-19-211**: *Exclusive WW and ZZ production in the fully hadronic channel with protons reconstructed in PPS*. Provides the PPS-based exclusive diboson analysis context, the signal MC setup with FPMC, the absence of built-in unitarization in those samples, and the clipping-based treatment of unitarity-violating signal tails. fileciteturn26file0turn27file12turn28file14
+1. **CMS AN-19-211**: *Exclusive WW and ZZ production in the fully hadronic channel with protons reconstructed in PPS*. Provides the PPS-based exclusive diboson analysis context, the signal MC setup with FPMC, the absence of built-in unitarization in those samples, and the clipping-based treatment of unitarity-violating signal tails. 
 
-2. **Eduardo da Silva Almeida, O. J. P. Éboli, M. C. Gonzalez-Garcia**, *Unitarity Constraints on Anomalous Quartic Couplings*, arXiv:2004.05174. Provides the coupled-channel partial-wave unitarity framework with all relevant helicities and both $J=0$ and $J=1$, and is a useful formal reference when deciding how conservative a clipping scale should be in a dimension-8 EFT study. fileciteturn27file3turn28file0turn28file4
+2. **Eduardo da Silva Almeida, O. J. P. Éboli, M. C. Gonzalez-Garcia**, *Unitarity Constraints on Anomalous Quartic Couplings*, arXiv:2004.05174. Provides the coupled-channel partial-wave unitarity framework with all relevant helicities and both $J=0$ and $J=1$, and is a useful formal reference when deciding how conservative a clipping scale should be in a dimension-8 EFT study. 
 
 ---
 
